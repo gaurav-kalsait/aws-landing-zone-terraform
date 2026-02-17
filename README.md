@@ -43,12 +43,20 @@
     📁 Project Structure
     aws-landing-zone-terraform/
     │
+    ├── modules/
+    │   ├── vpc/
+    │   ├── subnets/
+    │   ├── networking/
+    │   ├── flow-logs/
+    │
     ├── main.tf
-    ├── variables.tf\
     ├── providers.tf
+    ├── variables.tf
     ├── backend.tf
     ├── .gitignore
     └── README.md
+
+
     🚀 Deployment Instructions
     1️⃣ Prerequisites
         AWS Account
@@ -97,18 +105,14 @@
             Ensure you destroy resources after testing:
             # terraform destroy
     
-    ⚠️ NAT Gateway incurs cost (~$30+/month).
-    Ensure you destroy resources after testing:
-        # terraform destroy
+    
     ## 🏗 Modular Architecture
-
-    This project is structured using reusable Terraform modules:
-
-    - **VPC Module** – Core VPC configuration
-    - **Subnets Module** – Public & private subnet provisioning
-    - **Networking Module** – IGW, NAT, route tables, associations
-    - **Flow Logs Module** – CloudWatch integration and logging
-
+        This project is structured using reusable Terraform modules:
+        - **VPC Module** – Core VPC configuration
+        - **Subnets Module** – Public & private subnet provisioning
+        - **Networking Module** – IGW, NAT, route tables, associations
+        - **Flow Logs Module** – CloudWatch integration and logging
+    
     This modular design ensures:
     - Scalability
     - Maintainability
