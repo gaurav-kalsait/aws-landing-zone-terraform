@@ -100,3 +100,17 @@
     ⚠️ NAT Gateway incurs cost (~$30+/month).
     Ensure you destroy resources after testing:
         # terraform destroy
+    ## 🏗 Modular Architecture
+
+    This project is structured using reusable Terraform modules:
+
+    - **VPC Module** – Core VPC configuration
+    - **Subnets Module** – Public & private subnet provisioning
+    - **Networking Module** – IGW, NAT, route tables, associations
+    - **Flow Logs Module** – CloudWatch integration and logging
+
+    This modular design ensures:
+    - Scalability
+    - Maintainability
+    - Reusability
+    - Enterprise-grade structure
